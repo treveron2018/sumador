@@ -23,4 +23,10 @@ class TestASumar {
         assertEquals(null,resultado );
     }
 
+    @Test
+    public void testMasDigitos() {
+        ASumar suma = new ASumar("25");
+        String resultado = suma.mostrar();
+        assertEquals("2 + 5 = ",resultado );
+    }
 }

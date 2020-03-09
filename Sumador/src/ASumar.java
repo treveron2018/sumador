@@ -11,6 +11,22 @@ String valor_inicial;
 		this.valor_inicial=string;
 
 	}
+	
+	/**
+	 * devuelve la suma de los dígitos que se le pasan mediante un String
+	 * @return suma de los dígitos
+	 */
+    public int total() {
+        int suma = 0;
+
+        for (int i = 0; i < valor_inicial.length(); i++) {
+            // Cadena de un dígito.
+            String digito = valor_inicial.substring(i, 1);
+            suma = suma + Integer.getInteger(digito);
+        }
+        return suma;
+
+    }
 
 	
 	/**
@@ -25,8 +41,18 @@ String valor_inicial;
 		if (Integer.parseInt(numero)<0) {
 			return null;
 		}
-
-		return null;
+		else {
+			numero=valor_inicial.substring(0,1);
+			System.out.print(numero);
+			for(int i=1;i<valor_inicial.length();i++) {
+				System.out.print(" + "+valor_inicial.substring(i,i+1));
+			}
+			
+			System.out.print(" = ");
+			
+			Integer suma=new Integer(total());			
+			return suma.toString();
+		}
 	}
 	
 
