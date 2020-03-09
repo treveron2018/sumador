@@ -22,6 +22,9 @@ String valor_inicial;
 		if(numero.length()==1) {
 			return (numero+" = "+ numero);
 		}
+		if (Integer.parseInt(numero)<0) {
+			return null;
+		}
 
 		return null;
 	}
